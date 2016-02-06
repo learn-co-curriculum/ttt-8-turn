@@ -52,7 +52,7 @@ Should accept a board and a position from the user (remember that the user will 
 
 #### `#move`
 
-This method should accept a board, a position from the user (which will be in the 1-9 format), and a token to mark that position with (you can give that argument a default value of 'X'––we're not worrying about whose turn it is yet). The method should set the correct index value of that position within the board equal to the token.
+This method should accept a board, a position from the user (which will be in the 1-9 format), and a token to mark that position with (you can give that argument a default value of 'X'––we're not worrying about whose turn it is yet). The method should set the correct element within the board equal to the token.
 
 ### Workflow
 
@@ -108,11 +108,11 @@ Now let's run this CLI: `bin/turn` or `ruby bin/turn` from your terminal. You sh
 ```
 $ ./bin/turn
 Welcome to Tic Tac Toe!
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 ```
 
 Great! Now the next thing the CLI needs to do is kick off a turn of the game. We know we're going to build a `#turn` method to encapsulate that procedure, so even though we haven't defined it yet, let's add the call to the soon-to-be-coded `#turn` method to our CLI right now.
@@ -148,11 +148,11 @@ Let's run the CLI now: `bin/turn` or `ruby bin/turn` from your terminal. You sho
 ```
 $ ./bin/turn
 Welcome to Tic Tac Toe!
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 ```
 
@@ -188,18 +188,18 @@ Once you define `#turn` as specified by the tests in `spec/turn_spec.rb`, your C
 ```
 $ ./bin/turn
 Welcome to Tic Tac Toe!
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 1 # I entered 1 in response to the gets prompt.
- X |   |   
+ X |   |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 ```
 
 A subsequent run might yield:
@@ -207,18 +207,18 @@ A subsequent run might yield:
 ```
 $ ./bin/turn
 Welcome to Tic Tac Toe!
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 5
-   |   |   
+   |   |
 -----------
-   | X |   
+   | X |
 -----------
-   |   |   
+   |   |
 ```
 
 Currently our program only allows us to run 1 turn, the first turn. If you wanted to see how `#turn` would behave say on the third turn of the game, make the following edits to `bin/turn`:
@@ -247,11 +247,11 @@ When we run the CLI, we'd see:
 ```
 $ ./bin/turn
 Welcome to Tic Tac Toe!
-O |   |   
+O |   |
 -----------
-  | X |   
+  | X |
 -----------
-  |   |   
+  |   |
 Please enter 1-9:
 ```
 
@@ -282,18 +282,18 @@ Here we are manually making 3 moves, an X, an O, and then an X, as would proceed
 ```
 $ ./bin/turn
 Welcome to Tic Tac Toe!
- O | X |   
+ O | X |
 -----------
-   | X |   
+   | X |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 8
- O | X |   
+ O | X |
 -----------
-   | X |   
+   | X |
 -----------
-   | X |   
+   | X |
 ```
 
 It was O's move and when I entered 8 to block X with my O, our program put an X in!!! Why? We'll have to fix that. Can you anticipate what we might need to build to make that work?
@@ -327,67 +327,67 @@ Here's an entire execution of this CLI (remember, when you see a number that mea
 ```
 ./bin/turn
 Welcome to Tic Tac Toe!
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 1
- X |   |   
+ X |   |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 2
- X | X |   
+ X | X |
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 3
  X | X | X
 -----------
-   |   |   
+   |   |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 4
  X | X | X
 -----------
- X |   |   
+ X |   |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 5
  X | X | X
 -----------
- X | X |   
+ X | X |
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 6
  X | X | X
 -----------
  X | X | X
 -----------
-   |   |   
+   |   |
 Please enter 1-9:
 7
  X | X | X
 -----------
  X | X | X
 -----------
- X |   |   
+ X |   |
 Please enter 1-9:
 8
  X | X | X
 -----------
  X | X | X
 -----------
- X | X |   
+ X | X |
 Please enter 1-9:
 9
  X | X | X
@@ -395,7 +395,7 @@ Please enter 1-9:
  X | X | X
 -----------
  X | X | X
- 
+
 ```
 
 Another issue, besides only marking Xs as described above, is that the game played way too many turns! We need it to know how to quit if someone wins.
