@@ -1,5 +1,7 @@
 # Building a Tic Tac Toe Turn
+(Many of the TicTacToe labs require knowledge of method-calls and "scope" that aren't apparent to beginner students.  The Flatiron curriculum covers these subjects (well) in Procedural Ruby.  
 
+I think your organizers should have a look again, and probably shift some background information forward, into these chapters.)
 ## Objectives
 
 1. Build a method composed of the use of many methods ("helper methods") previously defined.
@@ -406,3 +408,5 @@ Even with these deficiencies, this `#turn` method means you are very close to bu
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/ttt-8-turn' title='Building a Tic Tac Toe Turn'>Building a Tic Tac Toe Turn</a> on Learn.co and start learning to code for free.</p>
 
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/ttt-8-turn'>Tic Tac Toe Turn </a> on Learn.co and start learning to code for free.</p>
